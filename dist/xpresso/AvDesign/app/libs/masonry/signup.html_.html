@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/venkat/Desktop/HtmlExample/jqueryAjaxExample/signup.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" href="./signup.html__files/bootstrap.min.css">
+    <link rel="stylesheet" href="./signup.html__files/style.css">
+    <script src="./signup.html__files/jquery.min.js.download"></script>
+    <script src="./signup.html__files/bootstrap.min.js.download"></script>
+    <script src="./signup.html__files/firebase.js.download"></script>
+    <script src="./signup.html__files/login.js.download"></script>
+</head>
+
+<body>
+    <button onclick="document.getElementById(&#39;loginpopup&#39;).style.display=&#39;block&#39;">Sign Up</button>
+    <div id="loginpopup" class="modal" style="display: block;">
+        <form class="modal-content">
+            <span onclick="document.getElementById(&#39;loginpopup&#39;).style.display=&#39;none&#39;" class="close" title="Close Modal">×</span>
+            <div style="margin: 10% auto;margin-top:50px;">
+                <div class="row form-group">
+                    <div class="col-sm-4">
+                        <input class="input-data" type="email" placeholder="Email Address" id="email">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4">
+                        <input class="input-data" type="password" placeholder="Password" id="pass">
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <button type="button" id="loginbtn" class="btn btn-sm btn-primary hide">Login</button>
+                    <button type="button" id="logoutbtn" class="btn btn-sm btn-primary">Logout</button>
+                    <button type="button" id="signupbtn" class="btn btn-sm btn-primary">Signup</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</body></html>

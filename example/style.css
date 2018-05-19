@@ -1,0 +1,81 @@
+.gridwrapper {
+    padding-left: 1.5vw;
+    padding-top: -3vw;
+    width: 97.5%;
+}
+
+.grid-container [class*="col-"] {
+    padding: 0px;
+    padding-bottom: 6px;
+}
+
+.xpresso-container {
+    overflow-y: scroll;
+    width: 320px;
+    height: 500px;
+    margin-left: 38%;
+    margin-top: 1%;
+    border: 1px solid darkgray
+}
+
+.groupPackImage {
+    max-width: 90%;
+    width: 90%;
+    cursor: pointer;
+}
+
+.autoSuggestTab {
+    border-radius: 50px;
+    min-width: 12vw;
+    border: 1px solid #FFFFFF;
+    background: #ebebeb;
+    color: #FFF;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.autoSuggestList {
+    height: 50%;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.xpresso-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.groupPackImageSpecial {
+    max-width: 96%;
+    width: 96%;
+}
+
+.animLi {
+    width: 44%;
+    height: auto;
+    margin-left: 4%;
+    margin-top: 4%;
+    display: inline-block;
+}
+
+
+.search-input {
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    background: #ebebeb;
+    outline: none;
+    text-indent: 1em;
+    padding-left: 0.5%;
+}
+
+.searchbtn {
+    pointer-events: all;
+    border: none;
+    background: none;
+    outline: none;
+}

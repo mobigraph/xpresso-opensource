@@ -1,0 +1,46 @@
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #09365d;
+  margin: 5% auto ; 
+  border: 1px solid #888;
+  width: 50%; 
+}
+
+
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.input-data{
+
+    border: 3px solid #206d66;
+    border-radius: 25px;
+    background-color: #09365d;
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.input-data::placeholder {
+  color: white;
+}
+
+
+}

@@ -1,0 +1,73 @@
+$(document).ready(function() {
+
+	var config = {
+		apiKey: "AIzaSyBRAvHUTGXxpYqPqHUbJc2SGA8IcKNDg20",
+		authDomain: "gopep-ab5dd.firebaseapp.com",
+		databaseURL: "https://gopep-ab5dd.firebaseio.com",
+		projectId: "gopep-ab5dd",
+		storageBucket: "",
+		messagingSenderId: "164983120674"
+	};
+	firebase.initializeApp(config);
+
+	var email = document.getElementById("email");
+	var password = document.getElementById("pass");
+
+	$("#signupbtn").click(function(e) {
+		e.preventDefault();
+
+		firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+			.then(function(response) {
+				console.log("user created" + JSON.stringify(response));
+			})
+			.catch(function(error) {
+				console.log("Error on create user" + error)
+			});
+
+	});
+
+	$("#loginbtn").click(function(e) {
+		e.preventDefault();
+
+		firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+			.then(function(response) {
+				console.log("user login" + response)
+			})
+			.catch(function(error) {
+				console.log("Error on login user" + error)
+			});
+
+	});
+
+	$("#logoutbtn").click(function(e) {
+
+		firebase.auth().signOut()
+			.then(function(response) {
+				console.log("signOut successfully")
+			})
+			.catch(function(error) {
+				console.log("Error on signOut user" + error)
+			});
+
+	});
+
+	firebase.auth().onAuthStateChanged(function(user) {
+		if (user) {
+			$("#logoutbtn").removeClass('hide')
+			$("#loginbtn").addClass('hide')
+		} else {
+			$("#logoutbtn").addClass('hide')
+			$("#loginbtn").removeClass('hide')
+		}
+	});
+
+	function getFormObj() {
+		var formObj = {};
+		var inputs = $('#signupForm').serializeArray();
+		$.each(inputs, function(i, input) {
+			formObj[input.name] = input.value;
+		});
+		return formObj;
+	}
+
+});
